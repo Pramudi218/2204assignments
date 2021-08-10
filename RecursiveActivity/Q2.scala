@@ -2,6 +2,7 @@ object recursions extends App{
 
   def GCD(num1:Int, num2:Int) : Int=num2 match{
     case 0 => num1
+    case num2 if (num2>num1) => GCD(num2,num1)
     case num2 => GCD(num2, num1%num2)
   }
 
